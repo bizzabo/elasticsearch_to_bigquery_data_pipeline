@@ -1,11 +1,13 @@
-<p align="center"><img width="300" src="img/bizzabo.svg"></p>
+<p align="center"><img width="350" src="img/bizzabo.svg"></p>
 
+<br>
+<br>
 <p float="center">
-  <img src="img/airflow.png" width="75" />
-  <img src="img/elasticsearch.png" width="75" /> 
-  <img src="img/dataflow.png" width="75" />
-  <img src="img/beam.png" width="75" />
-  <img src="img/bigquery.png" width="75" />
+  <img src="img/airflow.png" width="70" />
+  <img src="img/elasticsearch.png" width="70" /> 
+  <img src="img/dataflow.png" width="70" />
+  <img src="img/beam.png" width="70" />
+  <img src="img/bigquery.png" width="70" />
 </p>
 
 ![Kotlin](https://img.shields.io/badge/Kotlin-1.3-green.svg)
