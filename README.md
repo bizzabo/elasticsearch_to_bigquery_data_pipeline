@@ -1,10 +1,12 @@
-<p align="center"><img width="150" src="img/bizzabo.svg"></p>
+<p align="center"><img width="300" src="img/bizzabo.svg"></p>
 
-<img src="img/airflow.png" width="75"/>
-<img src="img/elasticsearch.png" width="75"/>
-<img src="img/dataflow.png" width="75"/>
-<img src="img/beam.png" width="75"/>
-<img src="img/bigquery.png" width="75"/> 
+<p float="center">
+  <img src="img/airflow.png" width="75" />
+  <img src="img/elasticsearch.png" width="75" /> 
+  <img src="img/dataflow.png" width="75" />
+  <img src="img/beam.png" width="75" />
+  <img src="img/bigquery.png" width="75" />
+</p>
 
 ![Kotlin](https://img.shields.io/badge/Kotlin-1.3-green.svg)
 ![Python](https://img.shields.io/badge/python-v3-green.svg)
@@ -46,6 +48,7 @@ If said table does not exist, writing to BigQuery will fail.
 
 ## Running
 ### CLI or IDE Execution
+
 When the application is executed, a job is created in Dataflow and the application is run with the provided arguments.
 Monitoring of the job can be done via Dataflow's web console.  
 ### Airflow Execution
