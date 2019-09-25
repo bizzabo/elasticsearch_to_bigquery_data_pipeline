@@ -1,0 +1,62 @@
+buildscript {
+    ext {
+        kotlinVersion = '1.2.51'
+        beamSdksJavaIoElasticsearch = '2.15.0'
+        googleCloudDataflowJavaSdkVersion = '2.5.0'
+        googleApiClientVersion = '1.30.2'
+        slf4jVersion = '1.7.25'
+        kotlinLoggingVersion = '1.5.4'
+    }
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
+}
+
+plugins {
+    id 'com.github.johnrengelman.shadow' version '5.1.0'
+    id 'java'
+    id 'distribution'
+    id 'application'
+}
+
+group 'com.bizzabo.dataPipelineFromElasticsearchToBigquery'
+version '0.1.0-SNAPSHOT'
+apply plugin: 'kotlin'
+mainClassName = 'com.bizzabo.dataPipelineFromElasticsearchToBigquery.ApplicationKt'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+    compile "org.apache.beam:beam-sdks-java-io-google-cloud-platform:${beamSdksJavaIoElasticsearch}"
+    compile "org.apache.beam:beam-sdks-java-io-elasticsearch:${beamSdksJavaIoElasticsearch}"
+    compile "org.apache.beam:beam-sdks-java-core:${beamSdksJavaIoElasticsearch}"
+    compile "org.apache.beam:beam-sdks-java-extensions-google-cloud-platform-core:${beamSdksJavaIoElasticsearch}"
+    compile("com.google.api-client:google-api-client:${googleApiClientVersion}") {
+        force = true
+    }
+    compile 'com.google.cloud:google-cloud-storage:1.90.0'
+
+    compile "org.slf4j:slf4j-api:${slf4jVersion}"
+    compile "org.slf4j:slf4j-jdk14:${slf4jVersion}"
+    compile "io.github.microutils:kotlin-logging:$kotlinLoggingVersion"
+
+    compile "com.google.guava:guava:23.6-jre"
+    compile "org.apache.httpcomponents:httpcore:4.4.8"
+    compile "org.apache.beam:beam-runners-google-cloud-dataflow-java:${beamSdksJavaIoElasticsearch}"
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = '1.8'
+}
+
+shadowJar {
+    mergeServiceFiles()
+}
