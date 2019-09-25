@@ -127,7 +127,7 @@ private fun populateDefaultArgMap(defaultArgMap: MutableMap<String, String>) {
     defaultArgMap["enableCloudDebugger"] = "true"
     defaultArgMap["endDate"] = "20190102"
     defaultArgMap["gcpTempLocation"] = "gs://dataPipelineFromElasticsearchToBigquery/gcpTempLocation/"
-    defaultArgMap["index"] = "elasticsearch_index"
+    defaultArgMap["index"] = "elasticsearchIndex"
     defaultArgMap["network"] = "gcp_network"
     defaultArgMap["numWorkers"] = "1000"
     defaultArgMap["paramName"] = "attributes.paramName.raw"
