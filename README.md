@@ -2,7 +2,7 @@
 
 <br>
 <br>
-<p float="center">
+<p align="center">
   <img src="img/airflow.png" width="70" />
   <img src="img/elasticsearch.png" width="70" /> 
   <img src="img/dataflow.png" width="70" />
