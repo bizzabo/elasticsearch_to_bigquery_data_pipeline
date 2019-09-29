@@ -24,6 +24,19 @@
 # Elasticsearch to BigQuery Data pipeline
 #### A generic data pipeline which maps Elasticsearch documents to Google BigQuery table rows using Apache Airflow and Google Cloud Dataflow
 
+* [About](#about)
+* [Getting Started](#getting-started)
+* [Prerequisites](#prerequisites)
+* [Arguments](#arguments)
+  * [Pipeline Arguments](#pipeline-arguments)
+  * [Elasticsearch Arguments](#elasticsearch-arguments)
+  * [Google Cloud Arguments](#google-cloud-arguments)
+* [Airflow Options](#airflow-options)
+* [Deployment](#deployment)
+* [Built With](#built-with)
+* [Project Status](#project-status)
+* [License](#license)
+
 ## About
 This application was developed following the need for an ETL process which would do the following:
 * Retrieve documents from Elasticsearch,
